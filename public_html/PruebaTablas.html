@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>PruebaTablas</title>
+  <script type="text/javascript">
+  function begin(){
+    var name=document.getElementById("name");
+    var surnames=document.getElementById("surnames");
+    var code=document.getElementById("code");
+    var birth=document.getElementById("birth")
+    alert("Hola "+name+" "+surnames+" tienes "+edad+" años");
+  }
+  function validateNumber(e){
+    var code = window.event ? e.which : e.keyCode;
+    if (code >= 48 && code <=57) {
+      return true;
+    }
+    return false;
+  }
+  function validateWord(e){
+    var code = window.event ? e.which : e.keyCode;
+    if ((code >= 65 && code <=90)||(code >=97 && code <=122)||(code==32)) {
+      return true;
+    }
+    return false;
+  }
+  </script>
+  <meta charset="utf-8">
+  <meta name="description" content="ejemplo_de_HTML5_CSS_JAVASCRIPT">
+  <meta name="keywords" content="HTML_CSS_Javascript">
+  <body>
+    <form>
+      <table width="50%" border="1">
+        <thead>
+          <tr>
+            <th colspan="2">Datos Estudiantes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Codigo</td>
+            <td><input type="text" maxlength="9" onkeypress="return validateNumber(event)" id="code" required="required"></td>
+          </tr>
+          <tr>
+            <td>Apellidos</td>
+            <td><input type="text" onkeypress="return validateWord(event)" id="surnames" required="required"></td>
+          </tr>
+          <tr>
+            <td>Nombres</td>
+            <td><input type="text" onkeypress="return validateWord(event)" required="required" id="name"></td>
+          </tr>
+          <tr>
+            <td>Fecha de nacimiento</td>
+            <td><input type="date" required="required" id="birth"></td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td style="text-align: center" colspan="2"><input type="submit" value="Enviar" onclick="begin()">
+            &nbsp;&nbsp;<input type="reset" value="Limpiar">
+            </td>
+          </tr>
+        </tfoot>
+      </table>
+    </form>
+  </body>
+</head>
