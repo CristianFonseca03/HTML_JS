@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo DOS</title>
+    <script type="text/javascript" src="scripts.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+  </head>
+  <body>
+    <div id=container>
+      <div id="operations">
+        <h3>Entrada de Datos</h3>
+        <label for="nOne">Numero Uno</label>
+        <input type="text" id="nOne" onkeypress="return validateNumber(event)"><br>
+        <label for="nTwo">Numero Dos</label>
+        <input type="text" id="nTwo" onkeypress="return validateNumber(event)">
+      </div>
+
+      <div id="options">
+        <h3>Opciones</h3>
+        <select id="option" onchange="menu()">
+          <option>Sumar</option>
+          <option>Restar</option>
+          <option>Multiplicar</option>
+          <option>Dividir</option>
+          <option>Numeros Primos</option>
+          <!-- mostrar tabla con los primos del menos y el mayor -->
+        </select>
+      </div>
+      <div id="result">
+        &nbsp;
+      </div>
+    </div>
+  </body>
+</html>
